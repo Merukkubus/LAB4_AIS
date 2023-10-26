@@ -12,10 +12,10 @@
     <Grid>
         <DataGrid x:Name="StudGrid" FontSize="16" FontWeight="Bold" Margin="10,10,27,0" Height="345" VerticalAlignment="Top" AutoGenerateColumns="True" ItemsSource="{Binding Persons}" SelectedItem="{Binding SelectedPerson}">
         </DataGrid>
-        <Button x:Name="bt_all" Content="Загрузить" Margin="46,369,651,18" Command="{Binding GetAllData}"/>
-        <Button x:Name="bt_save" Content="Сохранить" Margin="658,369,40,18" Command="{Binding SaveData}"/>
-        <Button x:Name="bt_del" Content="Удалить" Margin="200,369,498,18" RenderTransformOrigin="0.111,0.884" Command="{Binding DeleteData}"/>
-        <Button x:Name="bt_del_all" Content="Очистить" HorizontalAlignment="Right" Margin="0,369,349,18" Width="102" Command="{Binding ClearDB}"/>
-        <Button x:Name="bt_add" Content="Добавить" Margin="508,369,190,18" Command="{Binding AddData}"/>
+        <Button x:Name="bt_all" Content="Загрузить" Margin="46,369,651,18" Command="{Binding GetAllData}" Click="bt_all_Click"/>
+        <Button x:Name="bt_save" Content="Сохранить" Margin="658,369,40,18" Command="{Binding SaveData}" IsEnabled="False"/>
+        <Button x:Name="bt_del" Content="Удалить" Margin="200,369,498,18" RenderTransformOrigin="0.111,0.884" Command="{Binding DeleteData}" IsEnabled="False"/>
+        <Button x:Name="bt_del_all" Content="Очистить" HorizontalAlignment="Right" Margin="0,369,349,18" Width="102" Command="{Binding ClearDB}" IsEnabled="False"/>
+        <Button x:Name="bt_add" Content="Добавить" Margin="508,369,190,18" Command="{Binding AddData}" IsEnabled="False"/>
     </Grid>
 </Window>

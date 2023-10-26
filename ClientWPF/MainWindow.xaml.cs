@@ -24,5 +24,13 @@ namespace ClientWPF
         {
             InitializeComponent();
         }
+
+        private void bt_all_Click(object sender, RoutedEventArgs e)
+        {
+            bt_add.IsEnabled= true;
+            bt_del.IsEnabled= true;
+            bt_del_all.IsEnabled= true;
+            bt_save.IsEnabled= true;
+        }
     }
 }

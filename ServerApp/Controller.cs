@@ -15,34 +15,6 @@ namespace ServerApp
             }
             return String(students);
         }
-        public string GetSeparate(int num)
-        {
-            List<Person> students = new List<Person>();
-            using(STUDEntities db = new STUDEntities())
-            {
-                students = db.Person.Where(x => x.id == num).ToList();
-            }
-            if (students.Count == 0)
-            {
-                return "Неверное значение";
-            }
-            return String(students);
-        }
-        public bool Delete(int num)
-        {
-            try
-            {
-                STUDEntities db = new STUDEntities();
-                Person order = db.Person.Where(x => x.id == num).FirstOrDefault();
-                db.Person.Remove(order);
-                db.SaveChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
         public void AddToFile(string stud)
         {
             string[] studs = stud.Split(delimiter);

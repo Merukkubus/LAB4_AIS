@@ -66,9 +66,8 @@ namespace ClientWPF
                 try
                 {
                     int.Parse(item[0]);
-                    int.Parse(item[1]);
+                    int.Parse(item[3]);
                     byte.Parse(item[4]);
-                    SendRequest("save|" + GetData(persons));
                 }
                 catch (Exception e)
                 {
@@ -76,6 +75,7 @@ namespace ClientWPF
                     break;
                 }
             }
+            SendRequest("save|" + GetData(persons));
         }
         public string GetData(ObservableCollection<Person> persons)
         {
